@@ -393,7 +393,7 @@ Display_List:
     Gui, 1: Tab, %Group_Active%,, Exact ; Future controls are owned by this tab
     Gui, 1: Add, StatusBar, Background%StatusBar_Background_Colour% ; add before changing font
     Gui, 1: Font, s%Font_Size%, %Font_Type%
-    Gui, 1: Add, ListView, x-1 y+-4 r%Window_Found_Count% w%Listview_Width% AltSubmit -Multi NoSort Background%Listview_Colour% Count10 gListView_Event vListView1 HWNDhw_LV_ColorChange,%Col_Title_List%
+    Gui, 1: Add, ListView, x-1 y+-4 w%Listview_Width% AltSubmit -Multi NoSort Background%Listview_Colour% Count10 gListView_Event vListView1 HWNDhw_LV_ColorChange,%Col_Title_List%
     LV_ModifyCol(2, "Integer") ; sort hidden column 2 as numbers
     SB_SetParts(SB_Width, SB_Width, SB_Width)
     Gosub, SB_Update__CPU
