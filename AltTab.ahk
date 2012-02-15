@@ -1679,7 +1679,7 @@ Key_Pressed_1st_Letter:
     }
 
   ; \ key - close window
-  If (Key_Pressed_ASCII =92 or Key_Pressed_ASCII =220) ; \ or Alt+\
+  If (Key_Pressed_ASCII =92 or Key_Pressed_ASCII =220 or Key_Pressed_ASCII =222) ; \ or Alt+\
     {
     If ( A_TickCount - Time_Since_Last_Alt_Close < 200 ) ; prevention of accidentally closing too many windows
       Return
