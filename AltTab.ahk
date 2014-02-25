@@ -1827,10 +1827,10 @@ Get_Window_Icon(wid, Use_Large_Icons_Current) ; (window id, whether to get large
           If ( ! h_icon )
             {
             If Use_Large_Icons_Current =1
-              h_icon := DllCall( "GetClassLong", "uint", wid, "int", -14 ) ; GCL_HICON is -14
+              h_icon := DllCall( "GetClassLongPtr", "uint", wid, "int", -14 ) ; GCL_HICON is -14
             If ( ! h_icon )
               {
-              h_icon := DllCall( "GetClassLong", "uint", wid, "int", -34 ) ; GCL_HICONSM is -34
+              h_icon := DllCall( "GetClassLongPtr", "uint", wid, "int", -34 ) ; GCL_HICONSM is -34
               If ( ! h_icon )
                 h_icon := DllCall( "LoadIcon", "uint", 0, "uint", 32512 ) ; IDI_APPLICATION is 32512
               }
